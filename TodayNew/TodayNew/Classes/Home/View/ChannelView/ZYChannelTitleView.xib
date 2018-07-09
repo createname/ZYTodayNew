@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="waO-yi-l4o" customClass="ZYChannelTitleView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99S-tB-IrJ">
+                    <rect key="frame" x="10" y="0.0" width="66" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="我的频道">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqw-6B-v3J">
+                    <rect key="frame" x="86" y="5" width="86" height="45"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="点击进入频道">
+                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qh-VA-EdB">
+                    <rect key="frame" x="320" y="13" width="55" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="ZKh-1K-MGw"/>
+                        <constraint firstAttribute="height" constant="24" id="oDZ-ll-evk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="编辑">
+                        <color key="titleColor" red="0.82352941180000006" green="0.2470588235" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" title="完成"/>
+                    <connections>
+                        <action selector="editBtnClick:" destination="waO-yi-l4o" eventType="touchUpInside" id="5eX-I2-Rr4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="kqw-6B-v3J" firstAttribute="leading" secondItem="99S-tB-IrJ" secondAttribute="trailing" constant="10" id="72v-oH-4ad"/>
+                <constraint firstAttribute="bottom" secondItem="99S-tB-IrJ" secondAttribute="bottom" id="9Sx-51-FP7"/>
+                <constraint firstItem="2Qh-VA-EdB" firstAttribute="centerY" secondItem="waO-yi-l4o" secondAttribute="centerY" id="Hqj-6j-pgv"/>
+                <constraint firstItem="99S-tB-IrJ" firstAttribute="top" secondItem="waO-yi-l4o" secondAttribute="top" id="Pap-T7-L4I"/>
+                <constraint firstItem="99S-tB-IrJ" firstAttribute="leading" secondItem="waO-yi-l4o" secondAttribute="leading" constant="10" id="Sw2-iX-K2g"/>
+                <constraint firstAttribute="bottom" secondItem="kqw-6B-v3J" secondAttribute="bottom" id="VFC-IC-TZc"/>
+                <constraint firstAttribute="trailing" secondItem="2Qh-VA-EdB" secondAttribute="trailing" id="foP-I3-Kwe"/>
+                <constraint firstItem="kqw-6B-v3J" firstAttribute="top" secondItem="waO-yi-l4o" secondAttribute="top" constant="5" id="xAh-mD-ehU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="50G-Zt-aVI"/>
+            <connections>
+                <outlet property="editBtn" destination="2Qh-VA-EdB" id="Q5m-h9-zCv"/>
+                <outlet property="subTitleLabel" destination="kqw-6B-v3J" id="qRR-OH-SZm"/>
+                <outlet property="titleLabel" destination="99S-tB-IrJ" id="rXG-pl-kkR"/>
+            </connections>
+            <point key="canvasLocation" x="-30" y="468"/>
+        </view>
+    </objects>
+</document>

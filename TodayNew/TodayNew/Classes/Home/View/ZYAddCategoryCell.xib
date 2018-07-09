@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="emY-Ju-Wgy" customClass="ZYAddCategoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="141" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="141" height="44"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvg-4I-Tps">
+                        <rect key="frame" x="0.0" y="0.0" width="141" height="44"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteClick:" destination="emY-Ju-Wgy" eventType="touchUpInside" id="MtG-e2-JMc"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbH-FJ-PHq">
+                        <rect key="frame" x="121" y="0.0" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="2V5-yg-CPT"/>
+                            <constraint firstAttribute="width" constant="20" id="Gpf-HT-yhg"/>
+                        </constraints>
+                        <state key="normal" image="closeicon_repost_18x18_"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="hvg-4I-Tps" firstAttribute="top" secondItem="emY-Ju-Wgy" secondAttribute="top" id="EDy-a5-pI9"/>
+                <constraint firstItem="hvg-4I-Tps" firstAttribute="leading" secondItem="emY-Ju-Wgy" secondAttribute="leading" id="Hml-fI-E7a"/>
+                <constraint firstItem="jbH-FJ-PHq" firstAttribute="top" secondItem="hvg-4I-Tps" secondAttribute="top" id="Y6X-8O-5A6"/>
+                <constraint firstItem="jbH-FJ-PHq" firstAttribute="trailing" secondItem="hvg-4I-Tps" secondAttribute="trailing" id="flc-bE-ggJ"/>
+                <constraint firstAttribute="trailing" secondItem="hvg-4I-Tps" secondAttribute="trailing" id="ooG-pO-Q4q"/>
+                <constraint firstAttribute="bottom" secondItem="hvg-4I-Tps" secondAttribute="bottom" id="uYs-6T-eYx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Gat-Qz-q1o"/>
+            <size key="customSize" width="141" height="55"/>
+            <connections>
+                <outlet property="deleteButton" destination="jbH-FJ-PHq" id="SmE-Gd-fOM"/>
+                <outlet property="titleButton" destination="hvg-4I-Tps" id="uNZ-Ka-RH2"/>
+            </connections>
+            <point key="canvasLocation" x="79.5" y="51.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="closeicon_repost_18x18_" width="18" height="18"/>
+    </resources>
+</document>

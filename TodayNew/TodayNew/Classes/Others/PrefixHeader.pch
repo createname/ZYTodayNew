@@ -1,0 +1,78 @@
+//
+//  PrefixHeader.pch
+//  TodayNew
+//
+//  Created by liqiaona on 2018/5/4.
+//  Copyright © 2018年 ZY. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "ZYTransformTool.h"
+
+
+/// 服务器地址
+#define BASE_URL @"https://is.snssdk.com"
+
+//获取屏幕宽高
+// UIScreen width.
+#define  KScreenWidth   [UIScreen mainScreen].bounds.size.width
+// UIScreen height.
+#define  KScreenHeight  [UIScreen mainScreen].bounds.size.height
+// UIScreen.bound
+#define kScreen_Bounds [UIScreen mainScreen].bounds
+
+//当前版本
+#define IOS11 @available(iOS 11.0,*)
+//导航栏高度
+#define navHeight (CGFloat)([[UIApplication sharedApplication] statusBarFrame].size.height+44)
+//机型
+#define iPhoneX CGSizeEqualToSize(CGSizeMake(1125,2436), [[UIScreen mainScreen] currentMode].size)
+
+/**
+ *  十六进制颜色
+ */
+#define DEF_HEX_RGBA(hexrgb, al) [UIColor colorWithRed:((float)((hexrgb & 0xFF0000) >> 16))/255.0 green:((float)((hexrgb & 0xFF00) >> 8))/255.0 blue:((float)(hexrgb & 0xFF))/255.0 alpha:al]
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+//颜色
+// 背景灰色
+#define globalBackgroundColor RGB(248, 249, 247)
+// 背景红色
+#define globalRedColor RGB(196, 73, 67)
+//字体蓝色
+#define blueFontColor RGB(72, 100, 149)
+//背景灰色 132
+#define grayColor132 RGB(132, 132, 132)
+//背景灰色 232
+#define grayColor232 RGB(232, 232, 232)
+//夜间字体背景灰色 113
+#define grayColor113 RGB(113, 113, 113)
+//夜间背景灰色 37
+#define grayColor37 RGB(37, 37, 37)
+//灰色 210
+#define grayColor210 RGB(210, 210, 210)
+
+/// 动态图片的宽高
+// 图片的宽高
+// 1        screenWidth * 0.5
+// 2        (screenWidth - 35) / 2
+// 3,4,5-9    (screenWidth - 40) / 3
+#define image1Width KScreenWidth * 0.5
+#define image2Width (KScreenWidth - 35) * 0.5
+#define image3Width (KScreenWidth - 40) / 3
+
+
+#define newsTitleHeight 40
+#define kMyHeaderViewHeight 280
+#define kUserDetailHeaderBGImageViewHeight 146
+
+#endif
+#define ZYWeakSelf(type) __weak __typeof(type) weak##type = type;
+
+#ifdef DEBUG
+#define ZYLog(...) NSLog(__VA_ARGS__)
+#else
+#define ZYLog(...)
+#endif

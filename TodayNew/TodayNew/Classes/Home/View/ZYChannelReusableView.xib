@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="6BL-uq-6ZZ" customClass="ZYChannelReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRi-Pk-WVj">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcp-U3-t5B">
+                            <rect key="frame" x="10" y="0.0" width="66" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="我的频道">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFc-S7-QLu">
+                            <rect key="frame" x="86" y="5" width="86" height="45"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="点击进入频道">
+                                <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocX-04-lTL">
+                            <rect key="frame" x="265" y="13" width="55" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="LaA-Bh-cz8"/>
+                                <constraint firstAttribute="height" constant="24" id="iTL-hG-aBK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="编辑">
+                                <color key="titleColor" red="0.82352941180000006" green="0.2470588235" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="editClick:" destination="6BL-uq-6ZZ" eventType="touchUpInside" id="rfW-x9-8Cu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="rcp-U3-t5B" firstAttribute="leading" secondItem="SRi-Pk-WVj" secondAttribute="leading" constant="10" id="5Yy-Ds-v17"/>
+                        <constraint firstItem="vFc-S7-QLu" firstAttribute="leading" secondItem="rcp-U3-t5B" secondAttribute="trailing" constant="10" id="604-ak-SK0"/>
+                        <constraint firstAttribute="trailing" secondItem="ocX-04-lTL" secondAttribute="trailing" id="FRh-Pt-xlx"/>
+                        <constraint firstItem="ocX-04-lTL" firstAttribute="centerY" secondItem="SRi-Pk-WVj" secondAttribute="centerY" id="HxQ-BG-Gwm"/>
+                        <constraint firstAttribute="bottom" secondItem="vFc-S7-QLu" secondAttribute="bottom" id="TBW-iH-AsH"/>
+                        <constraint firstAttribute="bottom" secondItem="rcp-U3-t5B" secondAttribute="bottom" id="mrg-WZ-rDN"/>
+                        <constraint firstItem="rcp-U3-t5B" firstAttribute="top" secondItem="SRi-Pk-WVj" secondAttribute="top" id="rfT-8O-nUX"/>
+                        <constraint firstItem="vFc-S7-QLu" firstAttribute="top" secondItem="SRi-Pk-WVj" secondAttribute="top" constant="5" id="yAu-rW-elj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SRi-Pk-WVj" secondAttribute="trailing" id="3jR-Xl-3CS"/>
+                <constraint firstAttribute="bottom" secondItem="SRi-Pk-WVj" secondAttribute="bottom" id="63v-Qd-mhA"/>
+                <constraint firstItem="SRi-Pk-WVj" firstAttribute="top" secondItem="6BL-uq-6ZZ" secondAttribute="top" id="oiU-rv-Zob"/>
+                <constraint firstItem="SRi-Pk-WVj" firstAttribute="leading" secondItem="6BL-uq-6ZZ" secondAttribute="leading" id="pqS-pb-eNc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="H8M-2F-0sC"/>
+            <connections>
+                <outlet property="editButton" destination="ocX-04-lTL" id="mZE-a0-TFe"/>
+                <outlet property="subTitleLabel" destination="vFc-S7-QLu" id="Kvh-TB-w6h"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>
